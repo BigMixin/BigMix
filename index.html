@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Generator</title>
+    <link rel="stylesheet" href="styling.css"> <!-- Optional for styling -->
+</head>
+<body>
+    <h1>Recipe Generator</h1>
+
+    <!-- Ingredient Selection -->
+    <label for="ingredientDropdown">Select Ingredient:</label>
+    <select id="ingredientDropdown">
+        <option value="" disabled selected>Select an ingredient</option>
+    </select>
+    <button id="addIngredient">Add Ingredient</button>
+
+    <!-- List of Added Ingredients -->
+    <h3>Your Ingredients:</h3>
+    <ul id="ingredientList"></ul>
+
+    <!-- Find Recipes Button -->
+    <button id="findRecipes">Find Recipes</button>
+
+    <!-- Display Matching Recipes -->
+    <h2>Available Recipes</h2>
+    <div id="recipeResults"></div>
+
+    <!-- JavaScript File Links -->
+    <script src="fetchrecipes.js"></script>
+    <script src="addingredient.js"></script>
+    <script src="matchrecipes.js"></script>
+    <script src="displayrecipes.js"></script>
+    <script src="main.js"></script> <!-- Handles event listeners -->
+</body>
+</html>

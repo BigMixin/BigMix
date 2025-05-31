@@ -1,0 +1,128 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 18px; /* Improved readability */
+}
+
+/* Form Styling */
+form {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Mobile-Friendly Input & Button */
+input[type="text"], button {
+  width: 100%;
+  max-width: 400px; /* Ensures better scalability */
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 18px; /* Larger for easier touch interaction */
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Ingredient List Styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background-color: #e2e2e2;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Recipe Results Styling */
+#recipeResults {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Responsive Recipe Cards */
+.recipe-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.recipe-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.recipe-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.recipe-card li {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Responsive Design Tweaks */
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+  input[type="text"] {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .recipe-card {
+    width: 100%;
+  }
+}

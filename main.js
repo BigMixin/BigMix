@@ -1,6 +1,10 @@
 document.getElementById('findRecipes').addEventListener('click', async () => {
   const ingredientList = document.querySelectorAll('#ingredientList li');
-  const userIngredients = Array.from(ingredientList).map(li => li.textContent.trim());
+
+  // Extract only the ingredient name, ignoring the remove button
+  const userIngredients = Array.from(ingredientList).map(li => {
+    return li.firstChild.textContent.trim().toLowerCase();
+  });
 
   console.log("User ingredients:", userIngredients); // Debugging output
 
@@ -8,7 +12,7 @@ document.getElementById('findRecipes').addEventListener('click', async () => {
   console.log("Fetched recipes:", recipes); // Debugging output
 
   const matchedRecipes = matchRecipes(userIngredients, recipes); // Match user ingredients
-  console.log("Matched recipes:", matchedRecipes); //  Debugging output
+  console.log("Matched recipes:", matchedRecipes); // Debugging output
 
   displayRecipes(matchedRecipes); // Display results
 });

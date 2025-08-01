@@ -11,7 +11,6 @@
   padding: 20px;
 }
 
-
 /* Body Styling */
 body {
   font-family: Arial, sans-serif;
@@ -27,6 +26,7 @@ form {
   display: flex;
   justify-content: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 /* Mobile-Friendly Input & Button */
@@ -65,11 +65,27 @@ ul {
 
 li {
   background-color: #e2e2e2;
-  padding: 8px;
+  padding: 8px 12px;
   margin: 5px 0;
   border-radius: 5px;
-  display: inline-block;
-  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+/* Remove Button Styling */
+.remove-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.remove-button:hover {
+  color: #f44336;
 }
 
 /* Recipe Results Styling */
@@ -123,13 +139,42 @@ li {
     flex-direction: column;
     align-items: center;
   }
-  input[type="text"] {
+
+  input[type="text"],
+  button {
     width: 80%;
+  }
+
+  .recipe-card {
+    width: 45%;
   }
 }
 
 @media (max-width: 600px) {
+  body {
+    margin: 10px;
+    font-size: 16px;
+  }
+
+  input[type="text"],
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 15px;
+  }
+
+  .remove-button {
+    align-self: flex-end;
+    font-size: 18px;
+  }
+
   .recipe-card {
     width: 100%;
+    padding: 12px;
   }
 }
